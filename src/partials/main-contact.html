@@ -1,0 +1,72 @@
+<div class="main-contact" id="contact">
+  <div class="main-contact__container container">
+    <h2 class="main-contact__title title">Напишите нам</h2>
+    <p class="main-contact__descr descr">Пожалуйста, заполните форму. Подробная информация поможет нам сделать
+      предложение.
+    </p>
+    <form method="POST" class="main-contact__form contact-form" enctype="multipart/form-data">
+      <label class="contact-form__field form-field">
+        <span class="form-field_caption">Имя*</span>
+        <input type="text" placeholder="Ваше имя" class="form-field__input input-name" name="Имя">
+      </label>
+      <label class="contact-form__field form-field">
+        <span class="form-field_caption">Вы обращаетесь как</span>
+        <select class="form-field__input" name="Обращается как">
+          <option value="Компания">Компания</option>
+          <option value="ИП">ИП</option>
+          <option value="Физ.лицо">Физ.лицо</option>
+        </select>
+      </label>
+      <label class="contact-form__field form-field">
+        <span class="form-field_caption">Телефон*</span>
+        <input type="tel" placeholder="Ваш телефон" class="form-field__input input-tel" name="Телефон">
+      </label>
+      <label class="contact-form__field form-field">
+        <span class="form-field_caption">Почта*</span>
+        <input type="email" placeholder="Ваша почта" class="form-field__input input-mail" name="Email">
+      </label>
+      <label class="contact-form__field form-field custom-file" tabindex="0">
+        <input type="file" name="file[]" accept=".pdf"  class="custom-file__input input-file">
+        <span class="custom-file__text">Выберите файл (*.pdf)</span>
+      </label>
+      <div class="contact-form__field form-field">
+        <span class="form-field_caption">Предпочтительный способ связи</span>
+        <ul class="contact-form__list list-reset">
+          <li class="contact-form__item">
+            <label class="custom-radiobox">
+              <input type="radio" name="Способ связи" value="Телефон" class="custom-radiobox__field">
+              <span class="custom-radiobox__content">Тел.</span>
+            </label>
+          </li>
+          <li class="contact-form__item">
+            <label class="custom-radiobox">
+              <input type="radio" name="Способ связи" value="Email" class="custom-radiobox__field" checked>
+              <span class="custom-radiobox__content">Email</span>
+            </label>
+          </li>
+          <li class="contact-form__item">
+            <label class="custom-radiobox">
+              <input type="radio" name="Способ связи" value="WhatsApp" class="custom-radiobox__field">
+              <span class="custom-radiobox__content">WhatsApp</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <label class="contact-form__field contact-form__field--textarea form-field form-field">
+        <span class="form-field_caption">Сообщение</span>
+        <textarea type="text" placeholder="Ваше сообщение" class="form-field__input form-field__input--textarea"
+          name="Сообщение" maxlength="1000"></textarea>
+      </label>
+      <div class="contact-form__btns">
+        <label class="contact-form__checkbox custom-checkbox">
+          <input type="checkbox" class="custom-checkbox__field" checked>
+          <span class="custom-checkbox__content"></span>
+          <p class="custom-checkbox__text">Нажимая на кнопку отправить,
+            Вы соглашаетесь с <a href="data/doc/privacy.pdf" class="main-link" target="blank">политикой
+              конфиденциальности</a> </p>
+        </label>
+        <button class="contact-form__submit btn btn--fill btn-reset" type="submit">отправить</button>
+      </div>
+    </form>
+  </div>
+</div>

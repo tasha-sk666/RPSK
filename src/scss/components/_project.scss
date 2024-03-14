@@ -1,0 +1,125 @@
+.project {
+  padding-top: 109px;
+  padding-bottom: 120px;
+
+  &__top-container {
+    @include flex-all-sb;
+
+    align-items: flex-end;
+    margin-bottom: 40px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    max-width: 755px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nav {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__items {
+    .swiper-slide {
+      padding-bottom: 20px;
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    position: relative;
+    display: none;
+    width: 100%;
+    font-size: 18px;
+    color: var(--ebony-color);
+
+    .swiper-pagination-current {
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--accent-color);
+    }
+
+    @include mobile {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @include tablet {
+    padding-top: var(--main-offset);
+    padding-bottom: var(--main-offset);
+  }
+
+  @include mobile {
+    padding-top: 0;
+  }
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 10px 5px #9a9ca514;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 20px;
+    width: 100%;
+    min-height: 130px;
+    background-color: var(--white-color);
+  }
+
+  &__image {
+    width: 100%;
+    height: 250px;
+    max-height: 250px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--dark-color);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--graylt-color);
+  }
+
+  &__btn {
+    &--active {
+      color: var(--white-color);
+      background-color: var(--accent-color);
+    }
+  }
+}

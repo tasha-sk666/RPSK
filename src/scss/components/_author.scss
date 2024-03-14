@@ -1,0 +1,17 @@
+.author {
+  @include flex-all-center;
+
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--light-color);
+
+  &__icon {
+    @include bg-cover;
+
+    margin: 0 4px;
+    width: 13px;
+    height: 12px;
+    background-image: url('../img/copy-logo.png');
+  }
+}

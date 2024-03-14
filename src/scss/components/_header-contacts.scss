@@ -1,0 +1,24 @@
+.header-contacts {
+  @include flex-v-center;
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    @include tablet {
+      padding: 0;
+      width: 30px;
+      height: 30px;
+
+      .contacts-link__caption,
+      .contacts-link__value {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.footer {
+  position: relative;
+  background-color: var(--dark-color);
+
+  &__container {
+    display: grid;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--white-color);
+
+    @include small-tablet {
+      max-width: 430px;
+    }
+  }
+
+  &__logo {
+    color: var(--white-color);
+  }
+}
+
+.footer-nav {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white-color);
+    opacity: 0.7;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    @include for-desktop {
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+      opacity: 1;
+    }
+
+    &:active {
+      color: var(--accent-color);
+      opacity: 1;
+    }
+  }
+}
+
+.footer-contacts {
+  &__link {
+    padding-left: 30px;
+    background-size: 20px 20px;
+    opacity: 0.7;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .contacts-link__caption {
+      color: var(--white-color);
+    }
+
+    .contacts-link__value {
+      color: var(--white-color);
+    }
+
+    @include for-desktop {
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      opacity: 1;
+
+      .contacts-link__caption,
+      .contacts-link__value {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  @include flex-all-sb;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0.8;
+
+  &__message {
+    max-width: 435px;
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--white-color);
+    opacity: 0.8;
+  }
+
+  &__content {
+    @include flex-v-center;
+
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--white-color);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

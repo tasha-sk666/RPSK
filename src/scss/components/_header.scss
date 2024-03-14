@@ -1,0 +1,104 @@
+.header {
+  background-color: var(--white-color);
+
+  &__container {
+    @include flex-all-sb;
+
+    padding-top: 22px;
+    padding-bottom: 30px;
+
+    @include tablet {
+      justify-content: unset;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      margin-right: auto;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    color: var(--gray-color);
+    transition: color 0.3s ease-in-out;
+
+    @include for-desktop {
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+
+    &:active {
+      color: var(--accent-dark-color);
+    }
+  }
+
+  @include tablet {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    display: block;
+    overflow-y: auto;
+    padding: 50px;
+    width: 80%;
+    max-width: 450px;
+    height: 100vh;
+    background-color: var(--white-color);
+    transform: translateX(-150%);
+    transition: transform 0.3s ease-in-out;
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      margin-right: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &--active {
+      transform: none;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+
+  display: none;
+  margin-left: 15px;
+  color: var(--gray-color);
+
+  &:active {
+    color: var(--accent--color);
+  }
+
+  @include tablet {
+    z-index: 51;
+    display: block;
+  }
+}

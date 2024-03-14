@@ -1,0 +1,234 @@
+.service {
+  padding-top: 220px;
+  padding-bottom: var(--main-offset);
+
+  &__top {
+    @include flex-v-center;
+
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 810px;
+    text-align: center;
+  }
+
+  &__content {
+    align-items: center;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__nav {
+    grid-column: 5 span;
+
+    @include small-tablet {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    grid-column: 7 span;
+    width: 100%;
+
+    .swiper-slide {
+      border-radius: 15px;
+      height: 500px;
+      background-color: var(--light-color);
+
+      @include small-tablet {
+        height: auto;
+      }
+    }
+  }
+
+  @include tablet {
+    padding-top: 160px;
+    padding-bottom: 40px;
+  }
+
+  @include mobile {
+    padding-top: 140px;
+  }
+}
+
+.service-nav {
+  &__list {
+    @include small-tablet {
+      display: flex;
+      padding-bottom: 20px;
+      height: 30px;
+    }
+  }
+
+  &__item {
+    max-height: 40px;
+
+    @include small-tablet {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 28px;
+    white-space: nowrap;
+    color: var(--ebony-color);
+    transition: color 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border: 5px solid var(--light-color);
+      border-radius: 100%;
+      width: 7px;
+      height: 7px;
+      background-color: var(--ebony-color);
+      transform: translateY(-50%);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    @include for-desktop {
+      &:hover {
+        color: var(--gray-color);
+
+        &::before {
+          background-color: var(--gray-color);
+        }
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--accent-color);
+
+      &::before {
+        background-color: var(--accent-color);
+      }
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 22px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__scrollbar {
+    display: none;
+    margin-top: 15px;
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  padding: var(--grid-gap);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--dark-color);
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--gray-color);
+
+    @include small-tablet {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--gray-color);
+
+    &::before {
+      @include bg-cover;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11%;
+      width: 24px;
+      height: 24px;
+      background-image: url('../img/small-icon/white-list-check.png');
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  @include mobile {
+    padding: var(--grid-gap);
+  }
+}
+
+.swiper-slide-thumb-active {
+  .service-nav__btn {
+    color: var(--accent-color);
+
+    &::before {
+      background-color: var(--accent-color);
+    }
+
+    &:hover {
+      color: var(--accent-dark-color);
+
+      &::before {
+        background-color: var(--accent-dark-color);
+      }
+    }
+  }
+}

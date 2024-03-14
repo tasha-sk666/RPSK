@@ -1,0 +1,40 @@
+@import "mixins";
+
+:root {
+  // base
+  --font-family: "Ubuntu", sans-serif;
+  --content-width: 1230px;
+  --container-offset: 45px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --border-radius: 4px;
+  --grid-gap: 30px;
+  --main-offset: 80px;
+
+  // colors
+  --white-color: #fff;
+  --dark-color: #1e212c;
+  --gray-color: #424551;
+  --graylt-color: #787a80;
+  --ebony-color: #9a9ca5;
+  --light-color: #f4f5f6;
+  --accent-color: #ff5a30;
+  --accent-dark-color: #d32b01;
+  --green-color: #0b9d6c;
+  --main-shadow:
+    0 60px 60px -20px #9a9ca54a,
+    0 30px 24px -10px #9a9ca50d,
+    0 12px 10px -6px #9a9ca50a,
+    0 4px 4px -4px #1e212c08;
+}
+
+@include tablet {
+  :root {
+    --container-offset: 15px;
+  }
+}
+
+@include mobile {
+  :root {
+    --grid-gap: 15px;
+  }
+}

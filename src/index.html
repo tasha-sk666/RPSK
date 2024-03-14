@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/about.html')
+      @include('partials/mission.html')
+      @include('partials/service.html')
+      @include('partials/project.html')
+      @include('partials/partners.html')
+      @include('partials/main-contact.html')
+    </main>
+    @include('partials/footer.html')
+    <div class="overlay" data-menu-overlay></div>
+  </div>
+  @include('partials/modal.html')
+  <button class="btn-reset scroll-top" data-scroll-top aria-label="Скролл наверх">
+    <svg class="scroll-top__icon">
+      <use xlink:href="img/sprite.svg#scroll-to-top"></use>
+    </svg>
+  </button>
+</body>
+
+</html>

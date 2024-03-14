@@ -1,0 +1,115 @@
+.form-field {
+  position: relative;
+
+  .just-validate-error-label {
+    position: absolute;
+    font-size: 12px;
+  }
+
+  &_caption {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: left;
+    color: var(--gray-color);
+  }
+
+  &__input {
+    border: 1px solid #d7dadd;
+    border-radius: var(--border-radius);
+    padding: 11px 16px;
+    width: 100%;
+    height: 45px;
+    background-color: var(--light-color);
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: var(--ebony-color);
+    }
+
+    &--textarea {
+      width: 100%;
+      height: 128px;
+      resize: none;
+    }
+
+    @include for-desktop {
+      &:hover {
+        background-color: var(--white-color);
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-color: var(--accent-color);
+      background-color: var(--white-color);
+    }
+
+    &:active {
+      border-color: var(--accent-dark-color);
+    }
+  }
+
+  &--big {
+    flex-grow: 2;
+  }
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+
+  display: flex;
+  align-items: flex-start;
+
+  &__text {
+    margin: 0;
+    margin-right: 15px;
+    max-width: 380px;
+    font-size: 14px;
+    text-align: left;
+    color: var(--gray-color);
+
+    @include small-tablet {
+      margin-right: 0;
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+}
+
+.custom-radiobox {
+  @include custom-radiobox;
+}
+
+.custom-file {
+  &__input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__text {
+    @include flex-all-center;
+
+    align-self: center;
+    border: 1px solid var(--ebony-color);
+    border-radius: var(--border-radius);
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    color: var(--ebony-color);
+    background-color: transparent;
+    cursor: pointer;
+
+    @include for-desktop {
+      &:hover {
+        border-color: var(--accent-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// base
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// small components
+@import "./components/header-contacts";
+@import "./components/form";
+@import "./components/slider-nav";
+
+// main components
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/mission";
+@import "./components/service";
+@import "./components/project";
+@import "./components/partners";
+@import "./components/main-contact";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/author";
+@import "./components/scroll-top";

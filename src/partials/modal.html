@@ -1,0 +1,64 @@
+<div class="graph-modal">
+  <div class="graph-modal__container modal-card" role="dialog" aria-modal="true" data-graph-target="card-modal">
+    <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content container">
+      <h3 class="modal-card__title">Название проекта</h3>
+      <div class="modal-card__top">
+        <div class="swiper modal-card__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide modal-card__slide">
+              <div class="modal-card__image">
+                <img src="data/empty.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <button class="btn-reset slider-nav__btn modal-card__prev">
+            <svg>
+              <use xlink:href="img/sprite.svg#slider-left-long"></use>
+            </svg>
+          </button>
+          <button class="btn-reset slider-nav__btn modal-card__next">
+            <svg>
+              <use xlink:href="img/sprite.svg#slider-right-long"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-preview">
+          <div class="modal-preview__item" data-index="0">
+            <img src="data/empty.jpg" alt="">
+          </div>
+          <div class="modal-preview__item" data-index="1">
+            <img src="data/empty.jpg" alt="">
+          </div>
+          <div class="modal-preview__item" data-index="2">
+            <img src="data/empty.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="modal-card__bottom">
+        <div class="modal-card__descr modal-descr">
+          <h4 class="modal-descr__title">Выполненные работы:</h4>
+          <ul class="list-reset main-list modal-descr__list">
+            <li class="modal-descr__item">Устройство ленточного фундамента;</li>
+            <li class="modal-descr__item">Изготовление металлических конструкций;</li>
+            <li class="modal-descr__item">Гальваническая обработка секций металлических конструкций забора перед покраской (в соответствии с ГОСТ 9.307-89);</li>
+          </ul>
+        </div>
+        <ul class="list-reset modal-card__info modal-info ">
+          <li class="modal-info__item">
+            <div class="modal-info__title">Объект</div>
+            <div class="modal-info__descr">Музей криптографии</div>
+          </li>
+          <li class="modal-info__item">
+            <div class="modal-info__title">Адрес</div>
+            <div class="modal-info__descr">г. Москва, ул. Ботаническая, вл. 25с4</div>
+          </li>
+          <li class="modal-info__item">
+            <div class="modal-info__title">Срок</div>
+            <div class="modal-info__descr">6 месяцев, 2021 г.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
